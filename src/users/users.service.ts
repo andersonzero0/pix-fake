@@ -12,8 +12,8 @@ import * as bcrypt from 'bcrypt';
 @Injectable()
 export class UsersService {
   constructor(
-    @Inject('USERS_REPOSITORY')
-    private usersRepository: Repository<UsersEntity>,
+    @Inject(UsersEntity)
+    public usersRepository: Repository<UsersEntity>,
   ) {}
 
   // Create a new user
